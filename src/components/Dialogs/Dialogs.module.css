@@ -1,0 +1,23 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: rgb(166, 255, 0);
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.dialogs .one {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: red;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.dialogs .two {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    background-color: rgb(43, 255, 0);
+    padding: 10px;
+    border: 1px solid black;
+}

@@ -1,0 +1,10 @@
+.futer {
+  grid-area: f;
+  background-color: rgb(0, 0, 0);
+}
+.footerauthor{
+  float: none;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+ }
