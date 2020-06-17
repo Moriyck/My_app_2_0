@@ -3,7 +3,7 @@ import classes from './Friends.module.css'
 import FriendsItem from './FriendsItem'
 
 const Friends = (props) => {
-  debugger
+  //debugger
   let pageesCount = Math.ceil(props.totalPageCount / props.pageSaze)
   let pages = []
   for (let i = 1; i <= pageesCount; i++) {

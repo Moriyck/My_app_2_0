@@ -3,13 +3,15 @@ const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET_USERS'
 const SETCURRONTPAGE = 'SETCURRONTPAGE'
 const SETTOTALROWS = 'SETTOTALROWS'
+const TOGAL_IS_FECHING = 'TOGAL_IS_FECHING'
 
 let initialState = {
 
     users: [],
     pageSaze: 3,
     totalPageCount: 0,
-    currontPage: 1
+    currontPage: 1,
+    isFetching: false
 }
 
 const friendsReduser = (state = initialState, action) => {
@@ -61,6 +63,13 @@ const friendsReduser = (state = initialState, action) => {
                 }
             }
 
+        case TOGAL_IS_FECHING:
+            {
+                return {
+                    ...state,
+                    isFetching: action.isFetching
+                }
+            }
 
         default:
             return state
@@ -72,5 +81,6 @@ export const unFollowAC = (userId) => ({ type: UNFOLLOW, userId })
 export const setUsersAC = (users) => ({ type: SET_USERS, users })
 export const setCurrontPageAC = (currontPage) => ({ type: SETCURRONTPAGE, currontPage })
 export const setTotalRowsAC = (totalRows) => ({ type: SETTOTALROWS, totalRows })
+export const totalIsFetchingAC = (isFetching) => ({ type: TOGAL_IS_FECHING, isFetching })
 
 export default friendsReduser
