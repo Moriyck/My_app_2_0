@@ -4,7 +4,7 @@ import Profilinfo from './Profilinfo/Profilinfo'
 import Maypost from './Maypost/Maypost'
 
 const Profil = (props) => {
-  debugger
+  
   return (
     <div className={classes.profil}>
       <div>

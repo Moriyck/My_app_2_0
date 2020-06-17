@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Newpost.module.css'
 
 const Newpost = (props) => {
-  debugger
+  
   let newPostElement = React.createRef()
   let addPost = () => {
     props.addPost()

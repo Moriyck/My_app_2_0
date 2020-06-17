@@ -1,12 +1,13 @@
 import { combineReducers, createStore } from "redux"
-import profilReduser from "./profilReduser"
-import dialogsReduser from "./dialogsReduser"
-import saidebarReduser from "./saidsbarReduser"
-
+import profilReduser from "./Reduser/profilReduser"
+import dialogsReduser from "./Reduser/dialogsReduser"
+import saidebarReduser from "./Reduser/saidsbarReduser"
+import friendsReduser from "./Reduser/friendsReduser"
 
 let reduser = combineReducers({
     profilePage: profilReduser,
     dialogsPage: dialogsReduser,
+    friendsPage: friendsReduser,
     saidebar: saidebarReduser
 })
 

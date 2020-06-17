@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Profil from "./Profil";
-import { addPostActionCreator, updateNewPostTextActionCreator } from "../../redux/profilReduser";
+import { addPostActionCreator, updateNewPostTextActionCreator } from "../../redux/Reduser/profilReduser";
 
 let mapStateToProps = (state) => {
   return {
@@ -20,7 +20,7 @@ let mapDisprtchToProps = (dispatch) => {
     }
   }
 }
-debugger
+
 const ProfilContainer = connect(mapStateToProps, mapDisprtchToProps)(Profil)
 
 export default ProfilContainer
