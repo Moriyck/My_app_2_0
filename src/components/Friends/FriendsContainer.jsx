@@ -29,7 +29,7 @@ class FriendsContainer extends React.Component {
         this.props.setTotalRows(response.data.total_rows)
       })
   }
-  render() {
+  render() { 
 
     return (
       <div>
