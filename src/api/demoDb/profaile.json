@@ -1,0 +1,32 @@
+{
+    "_id": "demo_demo_",
+    "_rev": "8-c20a89c86927e7f36944130f236c4ba9",
+    "name": "demo_demo_",
+    "surname": "demo_demo_",
+    "birthdate": "2020-08-18",
+    "follow": false,
+    "date": "23.07.2020",
+    "status": "немного занят",
+    "avatar": "http://127.0.0.1:5984/profile/demo_demo_/category1.jpg",
+    "headerBackground": "http://127.0.0.1:5984/profile/demo_demo_/atmopsfera.jpg",
+    "description": "Good afternoon! Thank you for visiting my profile. Professionally engaged in the design, development and implementation of websites, web applications and other information technologies.",
+    "country": "Russia",
+    "city": "Moscow",
+    "motto": "Помните, что бы вы ни делали за спиной людей, вы делаете это перед Богом.",
+    "_attachments": {
+      "atmopsfera.jpg": {
+        "content_type": "image/jpeg",
+        "revpos": 7,
+        "digest": "md5-rQZ2h4dvozQ+be1dqg09hw==",
+        "length": 1137252,
+        "stub": true
+      },
+      "category1.jpg": {
+        "content_type": "image/jpeg",
+        "revpos": 5,
+        "digest": "md5-uJrSaUTAgn9zuZl01xr+yg==",
+        "length": 50086,
+        "stub": true
+      }
+    }
+  }
