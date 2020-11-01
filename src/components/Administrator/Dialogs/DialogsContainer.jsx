@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import Preloader from '../../../comon/preloader/preloader'
 import { withAuthRedirect } from '../../../hoc/withAuthRedirectComponent'
-import { getMyDialogs, putMessageDialogs } from '../../../redux/Reduser/dialogsReduser'
+import { getMyDialogs, putMessageDialogs } from '../../../redux/Reduser/dialogsReduser.ts'
 import { getProfile } from "../../../redux/Reduser/profilReduser"
 import Dialogs from './Dialogs'
 

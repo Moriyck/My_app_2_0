@@ -1,25 +1,27 @@
-import { stopSubmit } from "redux-form"
+import * as reduxForm from "redux-form"
 import { nameMyPasswordAPI } from "../../api/cocghdb/apiNameMy"
-import { type } from "os"
 
 const SET_AUTH_USER = 'SET_AUTH_USER'
 const TOGAL_IS_FECHING = 'TOGAL_IS_FECHING'
 const SET_INFO_NAME_MY = 'SET_INFO_NAME_MY'
 
 export type InitialStateType = {
-    initialState: any
+    name: null | string
+    isAuth: boolean
+    isFetching: boolean
+    infoNameMy: []
 }
 export type DataType = {
     data: any
 }
-let initialState = {
+let initialState: InitialStateType = {
     name: null,
     isAuth: false,
     isFetching: true,
     infoNameMy: []
 }
 
-const authReduser = (state = initialState, action: any) => {
+const authReduser = (state = initialState, action: any): InitialStateType => {
 
     switch (action.type) {
 
@@ -53,9 +55,23 @@ const authReduser = (state = initialState, action: any) => {
     }
 }
 
-export const setAuthUser = (name: any) => ({ type: SET_AUTH_USER, name })
-export const setInfoNameMy = (infoNameMy: any) => ({ type: SET_INFO_NAME_MY, infoNameMy })
-export const totalIsFetchin = (isFetching: any) => ({ type: TOGAL_IS_FECHING, isFetching })
+type SetAuthUserActionType = {
+    type: typeof SET_AUTH_USER,
+    name: any
+}
+export const setAuthUser = (name: any): SetAuthUserActionType => ({ type: SET_AUTH_USER, name })
+
+type SetInfoNameMyActionType = {
+    type: typeof SET_INFO_NAME_MY,
+    infoNameMy: any
+}
+export const setInfoNameMy = (infoNameMy: any): SetInfoNameMyActionType => ({ type: SET_INFO_NAME_MY, infoNameMy })
+
+type TotalIsFetchinActionType = {
+    type: typeof TOGAL_IS_FECHING,
+    isFetching: any
+}
+export const totalIsFetchin = (isFetching: any): TotalIsFetchinActionType => ({ type: TOGAL_IS_FECHING, isFetching })
 
 export const putRegistrUserNew = (nameMy: any, password: any) =>
     async (dispatch: any) => {
@@ -64,7 +80,7 @@ export const putRegistrUserNew = (nameMy: any, password: any) =>
             dispatch(setAuthUser(response.data.name))
         }
         else {
-            dispatch(stopSubmit('registration', { _error: response.data.error + " " + response.data.reason }))
+            dispatch(reduxForm.stopSubmit('registration', { _error: response.data.error + " " + response.data.reason }))
         }
     }
 
@@ -75,7 +91,7 @@ export const postNameMyPassword = (nameMy: any, password: any) =>
             dispatch(setAuthUser(response.data.name))
         }
         else {
-            dispatch(stopSubmit('login', { _error: response.data.error + " " + response.data.reason }))
+            dispatch(reduxForm.stopSubmit('login', { _error: response.data.error + " " + response.data.reason }))
         }
     }
 

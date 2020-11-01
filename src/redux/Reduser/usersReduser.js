@@ -1,5 +1,4 @@
-import { usersAPI } from "../../api/cocghdb/apiUsers"
-import { usersAPIM } from "../../api/mongodb/apiUsers"
+import * as apiUsers from "../../api/cocghdb/apiUsers"
 //import { updateObjectInArray } from "../../utils/validators/objectHelper"
 
 const TO_FOLLOW = 'TO_FOLLOW'
@@ -116,18 +115,18 @@ export const totalIsFetchinProgress = (followingInProgress, userId) => ({ type: 
 
 export const getUsers = (pageSaze, currontPage) =>
     async (dispatch) => {
-        debugger
+        
         dispatch(totalIsFetchin(true))
         let skipSaze = (pageSaze * currontPage) - pageSaze
-        const data = await usersAPI.getUsers(pageSaze, skipSaze)
-        debugger
+        const data = await apiUsers.usersAPI.getUsers(pageSaze, skipSaze)
+        
         if (data) {
             dispatch(totalIsFetchin(false))
             dispatch(setUsers(data.rows))
-            debugger
+            
             data.rows.map(u => {
-                debugger
-                usersAPI.getUsersFollow(u.id)
+               
+                apiUsers.usersAPI.getUsersFollow(u.id)
                     .then(data => {
                         if (data) {
                             dispatch(setUsersFollow(data[0]))
@@ -142,7 +141,7 @@ export const getUsers = (pageSaze, currontPage) =>
 export const followUnThunk = (userId, idFollow, revFollow) =>
     async (dispatch) => {
         dispatch(totalIsFetchinProgress(true, userId))
-        usersAPI.deleteFollow(idFollow, revFollow)
+        apiUsers.usersAPI.deleteFollow(idFollow, revFollow)
         dispatch(totalIsFetchinProgress(false, userId))
         dispatch(changeToUnFollow(userId))
     }
@@ -150,7 +149,7 @@ export const followUnThunk = (userId, idFollow, revFollow) =>
 export const followThunk = (userId, nameMy) =>
     async (dispatch) => {
         dispatch(totalIsFetchinProgress(true, userId))
-        usersAPI.postFollow(userId, nameMy)
+        apiUsers.usersAPI.postFollow(userId, nameMy)
         dispatch(totalIsFetchinProgress(false, userId))
         dispatch(changeToFollow(userId))
     }
