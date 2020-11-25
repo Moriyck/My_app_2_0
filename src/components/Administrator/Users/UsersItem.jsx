@@ -29,8 +29,7 @@ const usersItem = (props) => {
   }
 
   let messageUserGo = () => {
-    //let writ = 1
-  }
+      }
   
   return (
     <div className={classes.usersItem}>

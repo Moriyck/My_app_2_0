@@ -1,0 +1,4 @@
+.threeColumns{
+    display: grid;
+    grid-template-columns: 0.25fr 0.5fr 1fr;
+  }

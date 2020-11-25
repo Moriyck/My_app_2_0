@@ -10,6 +10,7 @@ import DialogsContainer from '../Administrator/Dialogs/DialogsContainer'
 import Futer from '../Administrator/Futer/Futer'
 import HeaderContainer from '../Administrator/Header/HeaderContainer'
 import NavbarContainer from '../Administrator/Navbar/NavbarConainer'
+import MyAssetsContainer from '../Administrator/MyAssets/MyAssetsContainer'
 import ProfilContainer from '../Administrator/Profil/ProfilContainer'
 import SettingsContainer from '../Administrator/Settings/SettingsContainer'
 import UsersContainer from '../Administrator/Users/UsersContainer'
@@ -35,6 +36,7 @@ class AuthContainer extends React.Component {
         <NavbarContainer />
         <div className={classes.appWrapperContent}>
           <Switch>
+            <Route path='/myAssets/:assetsId?' render={() => < MyAssetsContainer />} />
             <Route path='/profile/:userId?' render={() => < ProfilContainer />} />
             <Route path='/Dialogs/:userId?' render={() => < DialogsContainer />} />
             <Route path='/Users' render={() => < UsersContainer />} />

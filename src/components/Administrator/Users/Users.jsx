@@ -49,8 +49,7 @@ const Users = (props) => {
       <div className={classes.threeColumns}>
         <div>
           <span className={classes.activeButton}
-            onClick={(e) => { props.onPageChanged() }}
-          >Backward</span>
+            onClick={(e) => { props.onPageChanged() }} >Backward</span>
         </div>
         <div key='103'>
           {

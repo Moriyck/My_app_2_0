@@ -42,8 +42,7 @@ const Settings = (props) => {
             < ConfigureServices
               allSettings={props.allSettings}
               onChange={props.onChange}
-            />}
-        />
+            />} />
         <Route path='/Settings/UserAccount'
           render={() =>
             < UserAccount />} />

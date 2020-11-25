@@ -12,8 +12,9 @@ let initialState = {
         
     ],
     settingsLinks: [
-        { id: 1, name: 'Settings', to: '/Settings', activeClassName: 'classes.activelink' },
-        { id: 2, name: 'Contact us', to: '/ContactUs', activeClassName: 'classes.activelink' },
+        { id: 1, name: 'Profile settings', to: '/Settings', activeClassName: 'classes.activelink' },
+        { id: 2, name: 'Showcase settings', to: '/ShowcaseSettings', activeClassName: 'classes.activelink' },
+        { id: 3, name: 'Contact us', to: '/ContactUs', activeClassName: 'classes.activelink' },
     ],
 }
 

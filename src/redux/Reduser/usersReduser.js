@@ -17,7 +17,6 @@ let initialState = {
     pageSaze: 3,
     totalPageCount: 0,
     currontPage: 1,
-    //
     isFetching: true,
     followingInProgress: []
 }

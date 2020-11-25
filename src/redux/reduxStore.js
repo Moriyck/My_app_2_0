@@ -7,7 +7,7 @@ import menuReduser from "./Reduser/menuReduser"
 import profilReduser from "./Reduser/profilReduser"
 import settingsReduser from "./Reduser/settingsReduser"
 import usersReduser from "./Reduser/usersReduser"
-
+import myAssetsReduser from "./Reduser/myAssetsReduser"
 
 let reduser = combineReducers({
     profilePage: profilReduser,
@@ -16,6 +16,7 @@ let reduser = combineReducers({
     allMenu: menuReduser,
     authPage: authReduser,
     allSettings: settingsReduser,
+    myAssetsPage:myAssetsReduser,
     form: formReducer
 })
 

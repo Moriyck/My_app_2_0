@@ -75,7 +75,7 @@ const profilReduser = (state = initialState, action) => {
             }
 
         case RESPONSE_STATUS_TEXT:
-            debugger
+
             {
                 return {
                     ...state,
@@ -153,11 +153,9 @@ export const setProfile = (userId, propername, surname, birthdate) =>
 
 export const updateProfileAboutMe = (userId, doc, description, motto, status) =>
     async (dispatch) => {
-        debugger
         settingsAPI.updateProfileAboutMe(userId, doc, description, motto, status)
             .then(response => {
                 if (response.status) {
-                    debugger
                     dispatch(upDataProfilAdoutMe(description, motto, status))
                     dispatch(responseStatusText(response))
                 }
