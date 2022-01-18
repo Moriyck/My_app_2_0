@@ -1,15 +1,14 @@
-import React from 'react';
-import userPhoto from '../../../assets/img/user.png';
-import logoPhoto from '../../../assets/img/logo.png';
-import { baseUrlLocalCouchDb } from '../../../api/API';
-import classes from './Header.module.css';
+import React from 'react'
+import logoPhoto from '../../../assets/img/logo.png'
+import classes from './Header.module.css'
 
 const Header = (props) => {
   const logAut = () => {
     props.logAut()
   }
   let button = <button onClick={logAut}>log out</button>
-  let urlImages = `${baseUrlLocalCouchDb}/profile/${props.authPage.infoNameMy.name}/${props.authPage.infoNameMy.avatar}`
+  let avatar = props.authPage.avatar
+  
   return (
     <div className={classes.tooColomns}>
       <div>
@@ -31,7 +30,7 @@ const Header = (props) => {
         </div>
         <div className={classes.logName}>
           <span> Hello, {props.nameMy} </span>
-          <span> <img alt="" src={props.authPage.infoNameMy.avatar || userPhoto} /></span>
+          <span className={classes.avatar}> <img alt="" src={avatar} /></span>
           <span> {props.nameMy === null ? "log in or register" : button} </span>
         </div>
       </div>
@@ -39,4 +38,4 @@ const Header = (props) => {
   )
 }
 
-export default Header;
+export default Header

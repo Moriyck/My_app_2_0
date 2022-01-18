@@ -31,7 +31,7 @@ class ProfilContainer extends React.Component {
   }
 
   render() {
-  
+
     return (
       <div>
         <Profil {...this.props}
@@ -55,7 +55,14 @@ let mapStateToProps = (state) => ({
 })
 
 export default compose(
-  connect(mapStateToProps, { updateNewPostText, getProfile, getPosts, postPost, updateStatus, fileTheDownload }),
+  connect(mapStateToProps, {
+    updateNewPostText,
+    getProfile,
+    getPosts,
+    postPost,
+    updateStatus,
+    fileTheDownload
+  }),
   withRouter,
   withAuthRedirect
 )(ProfilContainer)

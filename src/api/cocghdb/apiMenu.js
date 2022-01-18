@@ -8,17 +8,10 @@ const couchdbInstance = axios.create({
 
 export const menuAPI = {
 
-    getMenu(menuId) {
-        return couchdbInstance.get(`all_menu/${menuId}`)
+    getAllMenu(menuId) {
+        return couchdbInstance.get(`all_menu/_all_docs?include_docs=true`)
             .then(response => {
-                return response.data
-            })
-    },
-
-    getMenuSettting(menuId) {
-        return couchdbInstance.get(`all_menu/${menuId}`)
-            .then(response => {
-                return response.data
+                return response.data.rows
             })
     }
 }

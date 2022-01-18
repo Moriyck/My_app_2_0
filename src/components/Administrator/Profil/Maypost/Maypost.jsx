@@ -12,7 +12,7 @@ const Maypost = React.memo((props) => {
         avatar={props.profil.avatar}
         message={p.doc.message}
         likesCount={p.doc.likesCount}
-      />);
+      />)
   return (
     <div>
       <div className={classes.item}>

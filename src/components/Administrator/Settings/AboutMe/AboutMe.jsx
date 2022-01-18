@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Input, Textarea } from '../../../../comon/FormsControls/FormsControls'
+import { Input, Textarea } from '../../../../common/FormsControls/FormsControls'
 import { requiredField } from '../../../../utils/validators/validator'
 
 const AboutMeForm = (props) => {

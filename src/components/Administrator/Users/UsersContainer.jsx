@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 import { compose } from 'redux'
-import Preloader from '../../../comon/preloader/preloader'
+import Preloader from '../../../common/preloader/preloader'
 import {
   changeToFollow, changeToUnFollow,
   followThunk,

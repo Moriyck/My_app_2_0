@@ -57,7 +57,6 @@ const settingsReduser = (state = initialState, action) => {
             }
 
         case ADD_IMAGE:
-            debugger
             {
                 return {
                     ...state,
@@ -103,11 +102,9 @@ export const postPost = (userId, message) =>
         profileAPI.postPost(userId, message)
         dispatch(addPost(userId))
     }
-
+/*
 export const fileTheDownload = (userId, rev, faileData) =>
     async (dispatch) => {
         profileAPI.fileTheDownload(userId, rev, faileData)
-        dispatch(addImage(faileData.name))
-    }
-
+        dispatc*/
 export default settingsReduser

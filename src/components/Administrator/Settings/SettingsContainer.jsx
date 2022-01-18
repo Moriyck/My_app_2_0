@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import { withAuthRedirect } from '../../../hoc/withAuthRedirectComponent'
-import { getMenuSettting } from '../../../redux/Reduser/menuReduser'
+import { getAllMenu } from '../../../redux/Reduser/menuReduser'
 import { fileTheDownload, getPosts, getProfile, postPost, updateNewPostText, setProfile, updateStatus, updateProfileAboutMe } from "../../../redux/Reduser/profilReduser"
 import Settings from './Settings'
 
@@ -15,7 +15,7 @@ class SettingsContainer extends React.Component {
       userId = this.props.nameMy
     }
     this.props.getProfile(userId)
-    this.props.getMenuSettting('settingMenu')
+    this.props.getAllMenu('profileSetting')
   }
 
   setProfile = (propername, surname, birthdate) => {
@@ -60,7 +60,17 @@ let mapStateToProps = (state) => ({
 })
 
 export default compose(
-  connect(mapStateToProps, { updateNewPostText, getProfile, getPosts, postPost, updateStatus, fileTheDownload, getMenuSettting, setProfile, updateProfileAboutMe }),
+  connect(mapStateToProps, {
+    updateNewPostText,
+    getProfile,
+    getPosts,
+    postPost,
+    updateStatus,
+    fileTheDownload,
+    getAllMenu,
+    setProfile,
+    updateProfileAboutMe
+  }),
   withRouter,
   withAuthRedirect
 )(SettingsContainer)

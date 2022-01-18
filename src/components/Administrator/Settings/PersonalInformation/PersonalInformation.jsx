@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Input } from '../../../../comon/FormsControls/FormsControls'
+import { Input } from '../../../../common/FormsControls/FormsControls'
 import { requiredField } from '../../../../utils/validators/validator'
 
 const PersonalInformationForm = (props) => {
@@ -13,7 +13,7 @@ const PersonalInformationForm = (props) => {
                         id="propername"
                         type="text"
                         name="propername"
-                        placeholder={props.profilePage.profil.name}
+                        placeholder="Name"
                         size="24"
                         component={Input}
                         validate={[requiredField]}

@@ -1,5 +1,5 @@
 import React from 'react'
-import Preloader from '../../../comon/preloader/preloader'
+import Preloader from '../../../common/preloader/preloader'
 import Maypost from './Maypost/Maypost'
 import Newpost from './Maypost/New_post/Newpost'
 import classes from './Profil.module.css'

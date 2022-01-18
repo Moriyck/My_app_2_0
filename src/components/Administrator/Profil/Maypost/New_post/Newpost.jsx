@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Textarea } from '../../../../../comon/FormsControls/FormsControls'
+import { Textarea } from '../../../../../common/FormsControls/FormsControls'
 import { maxLengthCreator, requiredField } from '../../../../../utils/validators/validator'
 import classes from './Newpost.module.css'
 
@@ -46,4 +46,4 @@ const Newpost = (props) => {
   )
 }
 
-export default Newpost;
+export default Newpost

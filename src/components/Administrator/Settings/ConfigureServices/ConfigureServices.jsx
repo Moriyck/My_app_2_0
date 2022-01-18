@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm, formValueSelector } from 'redux-form'
-import { Select } from '../../../../comon/FormsControls/FormsControls'
+import { Select } from '../../../../common/FormsControls/FormsControls'
 import { requiredField } from '../../../../utils/validators/validator'
 
 const ConfigureServicesForm = (props) => {

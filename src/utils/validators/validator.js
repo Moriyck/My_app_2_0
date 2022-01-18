@@ -1,7 +1,11 @@
 export const requiredField = value => {
     if (value) return undefined
-
     return "Field required"
+}
+
+export const ruleWritingCreator = (ruleWriting) => (value) => {
+    if (!ruleWriting.test(value)) return `Name must begin with a lowercase letter (a-z), Lowercase characters (a-z), Digits (0-9), Any of the characters _, $, (, ), +, -, and /!!!`
+    return undefined
 }
 
 export const maxLengthCreator = (maxLength) => (value) => {

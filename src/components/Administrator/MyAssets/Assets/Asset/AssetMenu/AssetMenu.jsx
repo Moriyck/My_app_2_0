@@ -1,30 +1,24 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import classes from './AssetMenu.module.css'
 
 const AssetMenu = (props) => {
+  let pathRoute = props.allMenu.assetSettingsMenu.map(sm =>
+    <div key={sm.id}>
+      <NavLink
+        key={sm.id}
+        to={sm.to}
+        className={classes.link}
+        activeClassName={classes.activelink}
+      >
+        {sm.name}
+      </NavLink>
+    </div>)
+  return (
+    <div>
+      {pathRoute}
+    </div>
+  )
+}
 
-    return (
-        <div>
-        <div>
-        <a href="#">Enterprise</a>
-       </div>
-       <div>
-        <a href="#">Personnel</a>
-       </div>
-       <div>
-        <a href="#">Salary</a>
-       </div>
-       <div>
-        <a href="#">Warehouse</a>
-       </div>
-       <div>
-        <a href="#">Shop</a>
-       </div>
-       <div>
-        <a href="#">Settings</a>
-       </div>
-       </div>
-                 
-    )
-  }
-  
-  export default AssetMenu;
+export default AssetMenu

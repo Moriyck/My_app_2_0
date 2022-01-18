@@ -9,7 +9,7 @@ import classes from './Settings.module.css'
 import UserAccount from './UserAccount/UserAccount'
 
 const Settings = (props) => {
-  let pathRoute = props.allMenu.settingMenu.map(sm =>
+  let pathRoute = props.allMenu.profileSetting.map(sm =>
     <span key={sm.id}>
       <NavLink
         key={sm.id}
@@ -20,6 +20,7 @@ const Settings = (props) => {
         {sm.name}
       </NavLink>
     </span>)
+    
   return (
     <div >
       <div>

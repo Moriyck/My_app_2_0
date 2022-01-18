@@ -3,9 +3,12 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import {
-  deleteNameMyPassword, getNameMy, postNameMyPassword, setAuthUser,
+  deleteNameMyPassword,
+  getNameMy,
+  postNameMyPassword,
+  setAuthUser,
   totalIsFetchin
-} from '../../../redux/Reduser/authReduser'
+} from '../../../redux/Reduser/Auth/authReduser'
 import Header from './Header'
 import classes from './Header.module.css'
 
@@ -25,7 +28,6 @@ class HeaderContainer extends React.Component {
         <Header
           {...this.props}
           logAut={this.logAut}
-          nameMy={this.props.nameMy}
         />
       </header>
     )
@@ -43,8 +45,11 @@ let mapStateToProps = (state) => {
 
 export default compose(
   connect(mapStateToProps, {
-    postNameMyPassword, getNameMy, setAuthUser,
-    totalIsFetchin, deleteNameMyPassword
+    postNameMyPassword,
+    getNameMy,
+    setAuthUser,
+    totalIsFetchin,
+    deleteNameMyPassword
   }),
   withRouter
 )(HeaderContainer)

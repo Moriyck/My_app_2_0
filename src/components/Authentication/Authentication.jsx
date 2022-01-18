@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './Auth.module.css'
 import { reduxForm, Field } from 'redux-form'
-import { Input } from '../../comon/FormsControls/FormsControls'
+import { Input } from '../../common/FormsControls/FormsControls'
 import { requiredField, minLengthCreator } from '../../utils/validators/validator'
 import { NavLink } from 'react-router-dom'
 

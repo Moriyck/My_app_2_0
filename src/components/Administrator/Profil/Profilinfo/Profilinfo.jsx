@@ -29,7 +29,7 @@ const Profilinfo = (props) => {
         </div>
         <div>
           <div>
-            <b> Description:</b>
+            <b>Description:</b>
           </div>
           <div>
             {props.profil.description}
