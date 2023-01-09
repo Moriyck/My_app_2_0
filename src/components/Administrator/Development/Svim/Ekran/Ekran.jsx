@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Ekran = (props) => {
+   
     let ekranText = props.ekran.text
-    let logStatePin = props.pin[21]
+    let logStatePin = props.pin[0]
     if (logStatePin === 0) {
         ekranText = props.ekran.text1
     }
@@ -11,7 +12,7 @@ const Ekran = (props) => {
     }
 
     return (
-        <div id="1">
+        <div id="112121212">
             <textarea value={ekranText}></textarea>
         </div>
     )

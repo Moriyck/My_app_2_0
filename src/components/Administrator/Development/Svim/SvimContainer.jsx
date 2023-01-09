@@ -6,8 +6,6 @@ import { withAuthRedirect } from '../../../../hoc/withAuthRedirectComponent'
 import TestSystem from '../TestSystem/TestSystem'
 import Ekran from './Ekran/Ekran'
 
-
-
 class SvimContainer extends React.Component {
 
   componentDidMount() {
@@ -19,8 +17,12 @@ class SvimContainer extends React.Component {
     return (
       <div>
         <div>
-          <Ekran />
-          <TestSystem/>
+          <Ekran
+            {...this.props}
+          />
+          <TestSystem
+            {...this.props}
+          />
         </div>
       </div>
     )
@@ -29,7 +31,14 @@ class SvimContainer extends React.Component {
 
 let mapStateToProps = (state) => ({
 
-  profilePage: state.profilePage
+  profilePage: state.profilePage,
+  ekran: {
+    text: 11,
+    text1: 45454,
+    text2: 'aaaassdasdsd feff'
+  },
+  pin: [0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1],
+  developmentSvimPage: { tests: [1, 2, 2, 1, 1, 1, 1, 1, 1] }
 })
 
 export default compose(

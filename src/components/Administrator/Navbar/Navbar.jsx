@@ -12,7 +12,7 @@ const Navbar = (props) => {
       <div className={classes.item}>
         {navLinks}
       </div>
-      My services
+      My apps
       <div className={classes.item}>
         {servicesLink}
       </div>

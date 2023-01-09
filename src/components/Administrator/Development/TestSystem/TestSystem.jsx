@@ -1,20 +1,21 @@
 import React from 'react'
+import PreloaderContainer from '../../../../common/preloader/PreloaderContainer'
 import AllTestsInTurn from './AllTestsInTurn'
 
 const TestSystem = (props) => {
-    debugger
+
     let tests = props.developmentSvimPage.tests
     let countElementsObj = tests.length
 
-
     let onetest = tests.map((as, index) =>
         <div>
-          <AllTestsInTurn/>
+            <AllTestsInTurn />
         </div>
     )
     let scopeOfAllTests = countElementsObj / countElementsObj * 100
     let allTests = scopeOfAllTests
     let textTest = 10
+    let nameTest = 1
 
     if (allTests < 100) {
         props.getTest(allTests, nameTest)

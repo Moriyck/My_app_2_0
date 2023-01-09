@@ -8,14 +8,14 @@ import SvimContainer from './Svim/SvimContainer'
 class DevelopmentContainer extends React.Component {
 
   componentDidMount() {
-   
+
   }
-  
+
   render() {
 
     return (
       <div>
-      <SvimContainer/>
+        <SvimContainer />
       </div>
     )
   }
@@ -27,7 +27,7 @@ let mapStateToProps = (state) => ({
 })
 
 export default compose(
-  connect(mapStateToProps, {    }),
+  connect(mapStateToProps, {}),
   withRouter,
   withAuthRedirect
 )(DevelopmentContainer)

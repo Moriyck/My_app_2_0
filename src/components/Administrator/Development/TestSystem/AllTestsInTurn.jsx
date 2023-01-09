@@ -4,7 +4,7 @@ const AllTestsInTurn = (props) => {
 
     return (
         <div >
-            11
+            8
         </div>
     )
 }
