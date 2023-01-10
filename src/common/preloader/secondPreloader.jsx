@@ -10,24 +10,37 @@ const SecondPreloader = (props) => {
 
     const canvasRef = useRef(null)
     useEffect((
+
         x = 0,
         y = 0,
-        width = 100,
-        height = 10
+        width = counter * 3,
+        height = 30,
+        size = 18,
+        text = counter + ' %',
+        textFont = size + 'px serif'
     ) => {
+        console.log(counter)
         const canvas = canvasRef.current
         const context = canvas.getContext('2d')
 
+
+        //context.clearRect(0, 0, width, height)
+
+        context.globalAlpha = counter * 0.1
         context.fillStyle = `red`
         context.fillRect(x, y, width, height)
-    },
-        []
-    )
+        context.fillStyle = `green`
+        context.font = textFont
+        context.fillText(text, width - (width * 0.5), 20)
 
+
+
+    },
+        [counter]
+    )
     return (
         <div id="114">
-            <canvas ref={canvasRef} id="myCanvas" width="100" height="10 "></canvas>
-            Test systems: {counter}  %
+            <canvas ref={canvasRef} id="myCanvas" width={counter * 3} height="30"></canvas>
         </div>
     )
 }

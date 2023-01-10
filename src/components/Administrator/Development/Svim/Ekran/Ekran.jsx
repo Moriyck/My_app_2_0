@@ -13,6 +13,7 @@ const Ekran = (props) => {
 
     return (
         <div id="112121212">
+            
             <textarea value={ekranText}></textarea>
         </div>
     )

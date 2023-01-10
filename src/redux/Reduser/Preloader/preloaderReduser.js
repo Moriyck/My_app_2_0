@@ -26,7 +26,7 @@ export const startCounter = (preloader, counter) =>
     async (dispatch) => {
 
         if (counter < 100) {
-            setTimeout(() => dispatch((turnOnTheCounter(preloader + 1, counter + 5))), 1000)
+            setTimeout(() => dispatch((turnOnTheCounter(preloader + 1, counter + 1))), 10)
         }
         if (counter === 100) {
             setTimeout(() => dispatch((turnOnTheCounter(preloader = 20, counter = 100))), 1000)
