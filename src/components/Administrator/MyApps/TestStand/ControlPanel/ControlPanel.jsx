@@ -4,11 +4,9 @@ import React, { useEffect, useRef } from 'react'
 const ControlPanel = (props) => {
 
     let counter = props.counter
-
-    if (counter < 10) {
+   
         props.startCounter(counter)
-    }
-
+    
     const canvasRef = useRef(null)
     useEffect((
         x = 0,
