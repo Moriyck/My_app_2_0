@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import ControlPanel from './ControlPanel/ControlPanel'
+import Dashboard from './Dashboard/Dashboard'
 
-const TestStand = () => {
+const TestStand = (props) => {
+   
+    let counter = props.applicationState.counter
+    
     return (
-        <div>
+        <div id="114">
             <div>
-                <b>My apps</b>
+                Test Stand {counter}
             </div>
             <div>
-                "TestStand"
+                < Dashboard
+                    counterD={counter}
+                    startCounter={props.startCounter}
+                />
             </div>
+            <div>
+                <div>
+                    <ControlPanel
+                        counterC={counter}
+                        startCounter={props.startCounter}
+                    />
+                </div>
+            </div>
+
         </div>
     )
 }

@@ -8,17 +8,25 @@ import {
 } from '../../../../redux/Reduser/menuReduser'
 import TestStand from './TestStand'
 
+import { startCounter } from '../../../../redux/Reduser/Application/applicationReduser'
+
 class TestStandConainer extends React.Component {
 
   componentDidMount() {
 
   }
 
+  startCounter = (counter) => {
+    this.props.startCounter(counter)
+  }
+
   render() {
+    
     return (
       <div>
         <TestStand
           {...this.props}
+          startCounter={this.startCounter}
         />
       </div>
     )
@@ -27,12 +35,14 @@ class TestStandConainer extends React.Component {
 
 let mapStateToProps = (state) => ({
   allMenu: state.allMenu,
+  applicationState: state.applicationPage,
 })
 
 export default compose(
-  connect(mapStateToProps, {
-    getAllMenu,
-  }),
+  connect(mapStateToProps,
+    { getAllMenu, startCounter },
+
+  ),
   withRouter,
   withAuthRedirect
 )(TestStandConainer)

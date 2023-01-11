@@ -7,9 +7,6 @@ import MyApps from './MyApps'
 import {
   getAllMenu,
 } from '../../../redux/Reduser/menuReduser'
-
-
-
 class MyAppsContainer extends React.Component {
 
   componentDidMount() {

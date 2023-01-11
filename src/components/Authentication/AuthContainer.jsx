@@ -44,7 +44,7 @@ class AuthContainer extends React.Component {
             <Route path='/myAssets/:assetsId?'
               render={() => < MyAssetsContainer />} />
             <Route path='/myApps'
-              render={() => <MyAppsContainer />} />
+              render={() => < MyAppsContainer />} />
             <Route path='/profile/:userId?'
               render={() => < ProfilContainer />} />
             <Route path='/Dialogs/:userId?'

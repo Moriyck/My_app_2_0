@@ -1,3 +1,10 @@
+.dashboard {
+    width: 250px;
+    height: 250px;
+    background-image: url(./speedometer.png);
+
+    }
+/*------------------------------------------------------------------------------*/
 .usersItem {
     display: grid;
     grid-template-columns: 0.15fr 1fr;

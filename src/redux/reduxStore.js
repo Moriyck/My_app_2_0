@@ -16,9 +16,11 @@ import modalReduser from "./Reduser/Modal/modalReduser"
 import developmentReduser from "./Reduser/Development/developmentReduser"
 import preloaderReduser from "./Reduser/Preloader/preloaderReduser"
 import svimReduser from "./Reduser/Development/Svim/svimReduser"
+import applicationReduser from "./Reduser/Application/applicationReduser"
 
 let reduser = combineReducers({
     preloaderState:preloaderReduser,
+    applicationPage:applicationReduser,
 
     profilePage: profilReduser,
     dialogsPage: dialogsReduser,
