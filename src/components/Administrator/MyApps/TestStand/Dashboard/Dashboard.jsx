@@ -3,7 +3,17 @@ import classes from './Dashboard.module.css'
 
 const Dashboard = (props) => {
 
-    let counterD = props.counterD
+    let counter = props.applicationState.counter
+    let arow = props.applicationState.arow
+    let thrust = props.applicationState.thrust
+
+    if (arow < thrust) {
+        props.startCounter(counter, arow + 0.01)
+    }
+
+    if (arow > thrust) {
+        props.startCounter(counter, arow - 0.01)
+    }
 
     // general settings
     let middleX = 0
@@ -19,8 +29,6 @@ const Dashboard = (props) => {
     let toX = 0
     let toY = 0
 
-    props.startCounter(counterD)
-
     const canvasRef = useRef(null)
     useEffect((
         x = 0,
@@ -30,14 +38,14 @@ const Dashboard = (props) => {
     ) => {
         const canvas = canvasRef.current
         const ctx = canvas.getContext('2d')
-        
+
         middleX = canvas.width / 2
         middleY = canvas.height / 2
         radius = canvas.width / 2 - canvas.width / 12
         arrowWidth = canvas.width / 50
 
-        arrowValueIndex = counterD
-        
+        arrowValueIndex = arow
+
         arrowAngle = arrowValueIndex * Math.PI
         toX = middleX + (radius) * Math.cos(arrowAngle)
         toY = middleY + (radius) * Math.sin(arrowAngle)
@@ -60,18 +68,27 @@ const Dashboard = (props) => {
         )
         ctx.fillStyle = arrowColor
         ctx.fill()
-    },
-        [counterD]
+           },
+        [counter]
     )
 
     return (
         <div id="114">
             <div>
-                Dashboard {arrowValueIndex}" "{middleY} {middleX}
+               Dashboard 
             </div>
-            <div className={classes.dashboard}>
-                <canvas ref={canvasRef} id="Canvas4" width="250" height="250"></canvas>
+            <div className={classes.fourColumns}>
+                <div className={classes.dashboard}>
+               <canvas ref={canvasRef} id="Canvas4" width="250" height="250"></canvas>
+                </div>
+                <div className={classes.dashboard}>
+                </div>
+                <div className={classes.dashboard}>
+                </div>
+                <div className={classes.dashboard}>
+                </div>
             </div>
+
         </div>
     )
 }

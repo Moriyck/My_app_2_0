@@ -1,31 +1,29 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import ControlPanel from './ControlPanel/ControlPanel'
 import Dashboard from './Dashboard/Dashboard'
 
 const TestStand = (props) => {
-   
-    let counter = props.applicationState.counter
-    
+
+    let applicationState = props.applicationState
+
     return (
         <div id="114">
             <div>
-                Test Stand {counter}
+                Test Stand
             </div>
             <div>
                 < Dashboard
-                    counterD={counter}
+                    applicationState={applicationState}
                     startCounter={props.startCounter}
                 />
             </div>
             <div>
-                <div>
-                    <ControlPanel
-                        counterC={counter}
-                        startCounter={props.startCounter}
-                    />
-                </div>
+                < ControlPanel
+                    applicationState={applicationState}
+                    startCounter={props.startCounter}
+                    onSubmit={props.onSubmit}
+                />
             </div>
-
         </div>
     )
 }

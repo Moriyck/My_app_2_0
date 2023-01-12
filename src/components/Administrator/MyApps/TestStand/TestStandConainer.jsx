@@ -8,7 +8,7 @@ import {
 } from '../../../../redux/Reduser/menuReduser'
 import TestStand from './TestStand'
 
-import { startCounter } from '../../../../redux/Reduser/Application/applicationReduser'
+import { startCounter, newThrust } from '../../../../redux/Reduser/Application/applicationReduser'
 
 class TestStandConainer extends React.Component {
 
@@ -16,17 +16,22 @@ class TestStandConainer extends React.Component {
 
   }
 
-  startCounter = (counter) => {
-    this.props.startCounter(counter)
+  startCounter = (counter, arow, counterC) => {
+    this.props.startCounter(counter, arow, counterC)
+  }
+
+  onSubmit = (newThrust) => {
+    this.props.newThrust(newThrust)
   }
 
   render() {
-    
+
     return (
       <div>
         <TestStand
           {...this.props}
           startCounter={this.startCounter}
+          onSubmit={this.onSubmit}
         />
       </div>
     )
@@ -40,7 +45,7 @@ let mapStateToProps = (state) => ({
 
 export default compose(
   connect(mapStateToProps,
-    { getAllMenu, startCounter },
+    { getAllMenu, startCounter, newThrust },
 
   ),
   withRouter,
