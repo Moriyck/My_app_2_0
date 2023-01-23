@@ -1,8 +1,9 @@
 .dashboard {
     width: 250px;
     height: 250px;
-}
+    background-image: url(./speedometer.png);
 
+    }
 /*------------------------------------------------------------------------------*/
 .usersItem {
     display: grid;

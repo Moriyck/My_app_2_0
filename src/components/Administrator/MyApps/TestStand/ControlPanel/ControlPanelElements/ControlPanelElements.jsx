@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
+import classes from './ControlPanelElements.module.css'
 import { Textarea } from '../../../../../../common/FormsControls/FormsControls'
 import { maxLengthCreator, requiredField } from '../../../../../../utils/validators/validator'
 
@@ -34,10 +35,30 @@ const NewThrust = (props) => {
     return (
         <div>
             <div>
-            /////////{props.applicationState.thrust}////////////
+            //////{props.applicationState.thrust}/////////
             </div>
             <div>
                 <ControlPanelReduxForm onSubmit={onSubmit} />
+            </div>
+            <div className={classes.threeColumns}>
+                <button>START POW</button>
+                <button>STOP</button>
+                <button>PAUS</button>
+                <button>START POW</button>
+                <button>STOP</button>
+                <button>PAUS</button>
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" name="volume"
+                    min="0" max="11"></input>
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" name="volume"
+                    min="0" max="11"></input>
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" name="volume"
+                    min="0" max="11"></input>
+                <label for="volume">Volume</label>
+                <input type="range" id="volume" name="volume"
+                    min="0" max="11"></input>
             </div>
         </div>
     )

@@ -1,9 +1,12 @@
-.dashboard {
-    width: 250px;
-    height: 250px;
+/* p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
 }
 
-/*------------------------------------------------------------------------------*/
+input {
+    margin: 0.4rem;
+} */
+
 .usersItem {
     display: grid;
     grid-template-columns: 0.15fr 1fr;
@@ -17,16 +20,22 @@
     border-radius: 12px;
 }
 
+.twoColumns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1px;
+}
+
 .threeColumns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 5px;
+    padding: 1px;
 }
 
 .fourColumns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 5px;
+    padding: 1px;
 }
 
 .allApps {
