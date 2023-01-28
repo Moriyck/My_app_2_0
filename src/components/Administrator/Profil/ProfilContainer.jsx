@@ -3,12 +3,20 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { compose } from 'redux'
 import { withAuthRedirect } from '../../../hoc/withAuthRedirectComponent'
-import { fileTheDownload, getPosts, getProfile, postPost, updateNewPostText, updateStatus } from "../../../redux/Reduser/profilReduser"
+import {
+  fileTheDownload,
+  getPosts,
+  getProfile,
+  postPost,
+  updateNewPostText,
+  updateStatus
+} from "../../../redux/Reduser/profilReduser"
 import Profil from './Profil'
 
 class ProfilContainer extends React.Component {
 
   componentDidMount() {
+    debugger
     let userId = this.props.match.params.userId
     if (!userId) {
       userId = this.props.nameMy
@@ -31,7 +39,7 @@ class ProfilContainer extends React.Component {
   }
 
   render() {
-
+    debugger
     return (
       <div>
         <Profil {...this.props}

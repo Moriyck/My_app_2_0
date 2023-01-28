@@ -1,0 +1,42 @@
+.navBar {
+    background: blue;
+    padding: 1px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+
+.logo {
+    width: 45px;
+    margin: auto;
+}
+
+.btn {
+    margin: auto 2px auto auto;
+}
+
+.twoColumns {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+}
+
+@media (min-width: 320px) {
+    .navBar {
+        background: rgb(255, 255, 255);
+        padding: 1px;
+    }
+
+    .textColor h3 {
+        color: black;
+    }
+}
+
+@media (min-width: 640px) {
+    .navBar {
+        background: blue;
+        padding: 1px;
+    }
+
+    .textColor h3 {
+        color: blue;
+    }
+}

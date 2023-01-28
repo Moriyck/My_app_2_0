@@ -10,7 +10,12 @@ export const nameMyPasswordAPI = {
 
     putRegistrUserNew(newUserName, password) {
 
-        return nameMyInstance.put(`_users/org.couchdb.user:${newUserName}`, { name: newUserName, password: password, roles: [], type: "user" })
+        return nameMyInstance.put(`_users/org.couchdb.user:${newUserName}`, {
+            name: newUserName,
+            password: password,
+            roles: [],
+            type: "user"
+        })
             .then(response => {
                 return response
             })

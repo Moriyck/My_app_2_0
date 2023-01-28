@@ -46,7 +46,11 @@ const LoginForm = (props) => {
           {props.error}
         </div>
         <div>
-          <button>Log In</button><span> or</span> <span key=""><NavLink to="/Registration" > Sing up</NavLink> </span>
+          <button>Log In</button>
+          <span> or</span>
+          <span key="">
+            <NavLink to="/Registration" > Sing up</NavLink>
+          </span>
         </div>
       </form>
     </div>

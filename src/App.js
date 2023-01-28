@@ -2,15 +2,17 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from "react-router-dom"
 import './App.css'
-import AuthContainer from './components/Authentication/AuthContainer'
+import TheFirstDirectoryContainer from './components/TheFirstDirectoryContainer'
 import store from './redux/reduxStore'
 
 const App = () => {
+
+    // 
     return (
         <BrowserRouter>
             <Provider store={store}>
                 <div>
-                    <AuthContainer />
+                    <TheFirstDirectoryContainer />
                 </div>
             </Provider>
         </BrowserRouter>

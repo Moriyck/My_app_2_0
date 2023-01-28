@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    padding: 200px 400px 0 0;
+
+    background: blue;
+    background-image: url(./123.png);
+    /* display: grid;
+    grid-template-columns: 1fr 0.1fr; */
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+@media (min-width: 320px) {
+    .header {
+        padding: 150px 0 0 0;
+        height: 603px;
+    }
+
+    .header h1 {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 640px) {
+    .header {
+        height: 832px;
+        padding: 100px 0 0 0;
+    }
+
+    .header h1 {
+        font-size: 82px;
+    }
+}

@@ -5,7 +5,7 @@ import Application from './Application'
 import classes from './Apps.module.css'
 
 const MyApps = (props) => {
-  
+
   let all_apps = [
     {
       "_id": "12cf9d9c306bd6fb8fdcbcb54b00d5e7",
@@ -18,18 +18,18 @@ const MyApps = (props) => {
     {
       "_id": "12cf9d9c306bd6fb8fdcbcb54b00fe3f",
       "_rev": "3-2107f79f06c99b554977de9833274760",
-      "name": "https://easyeda.com",
-      "to": "/easyeda",
+      "name": "easyeda",
+      "to": "https://easyeda.com",
       "routPath": "/app/:appId?",
-      "img": ""
+      "img": "http://localhost:5984/all_apps/12cf9d9c306bd6fb8fdcbcb54b00fe3f/5jjeasyeda.png"
     },
     {
       "_id": "12cf9d9c306bd6fb8fdcbcb54b016e35",
       "_rev": "5-6240861bd9fd28f15977a2aaa6e903bd",
-      "name": " https://miro.com/app/dashboard/",
-      "to": "/miro",
+      "name": "miro",
+      "to": " https://miro.com/",
       "routPath": "/app/:appId?",
-      "img": ""
+      "img": "http://localhost:5984/all_apps/12cf9d9c306bd6fb8fdcbcb54b016e35/1594987997img.png"
     },
     {
       "_id": "12cf9d9c306bd6fb8fdcbcb54b0226b0",
@@ -82,7 +82,7 @@ const MyApps = (props) => {
     }
   ]
 
-    let allAppp = all_apps.map(aa => <AllApps
+  let allAppp = all_apps.map(aa => <AllApps
     id={aa._id}
     name={aa.name}
     to={aa.to}

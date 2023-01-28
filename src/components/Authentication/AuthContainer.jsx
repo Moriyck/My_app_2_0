@@ -35,6 +35,7 @@ class AuthContainer extends React.Component {
   }
 
   render() {
+
     return (
       <div className={classes.appWrapper}>
         <HeaderContainer />
@@ -43,7 +44,7 @@ class AuthContainer extends React.Component {
           <Switch>
             <Route path='/myAssets/:assetsId?'
               render={() => < MyAssetsContainer />} />
-            <Route path='/myApps'
+            <Route path='/myApps/:appId?'
               render={() => < MyAppsContainer />} />
             <Route path='/profile/:userId?'
               render={() => < ProfilContainer />} />
@@ -56,8 +57,18 @@ class AuthContainer extends React.Component {
             <Route path='/Settings'
               render={() => < SettingsContainer />} />
             <Route exact path='/Registration'
-              render={() => < Registration {...this.props} onSubmit={this.onSubmit} />} />
-            {this.props.nameMy === null ? <Authentication {...this.props} onSubmit={this.onSubmit} /> : <Redirect to={'/Authentication'} />}
+              render={() => <Registration
+                {...this.props} onSubmit={this.onSubmit}
+              />}
+            />
+            {
+              this.props.nameMy === null ?
+                <Authentication
+                  {...this.props} onSubmit={this.onSubmit}
+                /> :
+                <Redirect
+                  to={'/AuthContainer'}
+                />}
           </Switch>
         </div>
         <Futer />
