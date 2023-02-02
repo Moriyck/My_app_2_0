@@ -1,0 +1,19 @@
+.leadParagraph {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 320px) {
+    .leadParagraph {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (min-width: 640px) {
+    .leadParagraph {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

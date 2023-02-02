@@ -1,0 +1,34 @@
+.expertOpinion {
+    width: 100%;
+    text-align: center;
+    background: blue;
+}
+
+.cardImg {
+    background: white;
+    border-radius: 300px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.151);
+}
+
+@media (min-width: 320px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cardImg {
+        width: 75%;
+    }
+
+}
+
+@media (min-width: 640px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cardImg {
+        width: 100%;
+    }
+}

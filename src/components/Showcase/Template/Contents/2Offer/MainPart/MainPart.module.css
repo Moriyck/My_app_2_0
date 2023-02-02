@@ -1,0 +1,17 @@
+.mainPart {
+    background: blue;
+}
+
+@media (min-width: 320px) {
+    .mainPart {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 640px) {
+    .mainPart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

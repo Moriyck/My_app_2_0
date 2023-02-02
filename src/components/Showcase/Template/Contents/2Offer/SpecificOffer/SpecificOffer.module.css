@@ -1,0 +1,54 @@
+.specificOffer {
+   
+    padding: 1px;
+}
+
+.card {
+    background: white;
+    margin: 1px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.151);
+    text-align: center;
+}
+
+.cardImg {
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.151);
+}
+
+.category {
+    background: white;
+    margin: 1px;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.151);
+    text-align: center;
+}
+
+.cacategoryrdImg {
+    width: 50%;
+}
+
+@media (min-width: 320px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .categoryBox {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 640px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .categoryBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

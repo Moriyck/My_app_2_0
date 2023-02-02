@@ -14,7 +14,7 @@ const Navbar = (props) => {
                 <a className={classes.twoColumns}>
                     <img className={classes.logo} src={logo} />
                     <div className={classes.textColor}>
-                     <h3>LOGO Цифровой</h3>
+                     <h3>Цифровой подход</h3>
                     </div>
                 </a>
             </div>

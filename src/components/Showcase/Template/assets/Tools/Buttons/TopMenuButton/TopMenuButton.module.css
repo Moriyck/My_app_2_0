@@ -2,7 +2,7 @@
     width: 40px;
     height: 40px;
     border-radius: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: blue;
     border: none;
     position: relative;
 
@@ -13,9 +13,9 @@ button::after {
     width: 12px;
     height: 2px;
     border-radius: 1px;
-    background-color: blue;
+    background-color:white;
     position: absolute;
     top: 15px;
     left: 14px;
-    box-shadow: 0 4px 0 0 blue, 0 8px 0 0 blue;
+    box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
 }

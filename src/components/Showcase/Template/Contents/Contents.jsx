@@ -1,17 +1,14 @@
 import React from 'react'
 import Greeteng from './1Greeting/Greeteng'
-import LeadParagraph from './2LeadParagraph/LeadParagraph'
-import Offer from './3Offer/Offer'
-import Objections from './4Objections/Objections'
-import Bargain from './5Bargain/Bargain'
-import classes from './Contents.module.css'
+import Offer from './2Offer/Offer'
+import Objections from './3Objections/Objections'
+import Bargain from './4Bargain/Bargain'
 
 const Contents = (props) => {
 
     return (
-        <div className={classes.contents}>
+        <div >
             <Greeteng />
-            <LeadParagraph />
             <Offer />
             <Objections />
             <Bargain />

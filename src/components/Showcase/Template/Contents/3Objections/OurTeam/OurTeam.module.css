@@ -1,0 +1,23 @@
+.ourTeam {
+    width: 100%;
+    text-align: center;
+    background: blue;
+}
+
+.cardImg{
+    width: 250px;
+}
+
+@media (min-width: 320px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 640px) {
+    .cardBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
